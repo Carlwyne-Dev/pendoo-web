@@ -29,11 +29,16 @@
       <p class="hero-desc">The calmest way to keep track of what you're waiting for. Drop your pending items here, and enjoy the quiet.</p>
       
       <div class="cta-group">
-        <a href="https://github.com/Carlwyne-Dev/pendoo-web/releases/latest/download/Pendoo.apk" class="btn btn-primary" id="download" download>
+        <button class="btn btn-primary" id="download-trigger">
           Download APK
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-        </a>
+        </button>
       </div>
+      <p class="download-disclaimer">
+        By downloading, you agree to our
+        <a href="terms.html">Terms &amp; Conditions</a> and
+        <a href="privacy.html">Privacy Policy</a>.
+      </p>
     </div>
 
     <!-- Phone Mockup -->
@@ -83,6 +88,28 @@
       </div>
     </div>
   </footer>
+
+  <!-- Android Warning Modal -->
+  <div id="dl-overlay" class="admin-overlay hidden">
+    <div class="admin-modal">
+      <div class="admin-modal-header">
+        <span class="admin-lock-icon">⚠️</span>
+        <h3>Heads up!</h3>
+        <p>Android may show a security warning when installing this APK since it's not from the Play Store.</p>
+      </div>
+      <div class="dl-warning-steps">
+        <div class="dl-step"><span class="dl-step-num">1</span> Tap <strong>Download Anyway</strong> below</div>
+        <div class="dl-step"><span class="dl-step-num">2</span> Open the downloaded file</div>
+        <div class="dl-step"><span class="dl-step-num">3</span> If prompted, tap <strong>Install Anyway</strong></div>
+      </div>
+      <div class="admin-modal-actions" style="flex-direction: column; gap: 0.5rem;">
+        <a href="https://github.com/Carlwyne-Dev/pendoo-web/releases/latest/download/Pendoo.apk" id="download" class="btn btn-primary" download style="text-align:center; text-decoration:none; border-radius:14px; padding:0.85rem; font-size:0.95rem; font-weight:700;">
+          Download Anyway
+        </a>
+        <button id="dl-cancel" class="admin-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Password Modal -->
   <div id="pw-overlay" class="admin-overlay hidden">
