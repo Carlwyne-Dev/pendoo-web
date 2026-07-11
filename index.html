@@ -75,14 +75,55 @@
     <div class="footer-content">
       <div class="footer-left">
         <span class="footer-logo">Pendoo</span>
-        <p>&copy; 2026 Pendoo. All rights reserved.</p>
+        <p>&copy; <span id="year-trigger">2026</span> Pendoo. All rights reserved.</p>
       </div>
       <div class="footer-links">
-        <a href="terms.html">Terms & Conditions</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
       </div>
     </div>
   </footer>
+
+  <!-- Password Modal -->
+  <div id="pw-overlay" class="admin-overlay hidden">
+    <div class="admin-modal">
+      <div class="admin-modal-header">
+        <span class="admin-lock-icon">🔒</span>
+        <h3>Admin Access</h3>
+        <p>Enter the secret password</p>
+      </div>
+      <input type="password" id="pw-input" class="admin-input" placeholder="Password" autocomplete="off" />
+      <div id="pw-error" class="admin-error hidden">Incorrect password.</div>
+      <div class="admin-modal-actions">
+        <button id="pw-cancel" class="admin-btn-secondary">Cancel</button>
+        <button id="pw-submit" class="admin-btn-primary">Enter</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Modal -->
+  <div id="stats-overlay" class="admin-overlay hidden">
+    <div class="admin-modal">
+      <div class="admin-modal-header">
+        <span class="admin-lock-icon">📊</span>
+        <h3>Admin Panel</h3>
+        <p>pendoo-web analytics</p>
+      </div>
+      <div class="admin-stats">
+        <div class="admin-stat-card">
+          <div class="admin-stat-num" id="stat-views">—</div>
+          <div class="admin-stat-label">Page Views</div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-num" id="stat-clicks">—</div>
+          <div class="admin-stat-label">Download Clicks</div>
+        </div>
+      </div>
+      <div class="admin-modal-actions">
+        <button id="stats-close" class="admin-btn-primary" style="width:100%">Close</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
