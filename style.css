@@ -114,6 +114,10 @@ body {
 .hero-content {
   flex: 1;
   max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .pill-badge {
@@ -573,4 +577,44 @@ body {
   font-size: 0.75rem;
   font-weight: 700;
   flex-shrink: 0;
+}
+
+/* ── Accordion dropdowns ── */
+.dl-accordion {
+  border: 1.5px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+}
+.dl-accordion summary {
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+  background: #f9fafb;
+  transition: background 0.15s;
+}
+.dl-accordion summary::-webkit-details-marker { display: none; }
+.dl-accordion summary::after {
+  content: '›';
+  margin-left: auto;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  transition: transform 0.2s;
+}
+.dl-accordion[open] summary::after { transform: rotate(90deg); }
+.dl-accordion summary:hover { background: #f3f4f6; }
+.dl-accordion-body {
+  padding: 0.75rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  border-top: 1px solid #e5e7eb;
+  background: #fff;
 }

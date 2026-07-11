@@ -95,14 +95,28 @@
       <div class="admin-modal-header">
         <span class="admin-lock-icon">⚠️</span>
         <h3>Heads up!</h3>
-        <p>Android may show a security warning when installing this APK since it's not from the Play Store.</p>
+        <p>Android may show a security warning since this APK is not from the Play Store.</p>
       </div>
-      <div class="dl-warning-steps">
-        <div class="dl-step"><span class="dl-step-num">1</span> Tap <strong>Download Anyway</strong> below</div>
-        <div class="dl-step"><span class="dl-step-num">2</span> Open the downloaded file</div>
-        <div class="dl-step"><span class="dl-step-num">3</span> If prompted, tap <strong>Install Anyway</strong></div>
-      </div>
-      <div class="admin-modal-actions" style="flex-direction: column; gap: 0.5rem;">
+
+      <details class="dl-accordion">
+        <summary>📥 Download Instructions</summary>
+        <div class="dl-accordion-body">
+          <div class="dl-step"><span class="dl-step-num">1</span> Tap <strong>Download Anyway</strong> below</div>
+          <div class="dl-step"><span class="dl-step-num">2</span> Wait for the APK file to download</div>
+          <div class="dl-step"><span class="dl-step-num">3</span> Find it in your <strong>Downloads</strong> folder</div>
+        </div>
+      </details>
+
+      <details class="dl-accordion">
+        <summary>🔧 Installation Instructions</summary>
+        <div class="dl-accordion-body">
+          <div class="dl-step"><span class="dl-step-num">1</span> Open the downloaded <strong>Pendoo.apk</strong></div>
+          <div class="dl-step"><span class="dl-step-num">2</span> If prompted, tap <strong>Install Anyway</strong></div>
+          <div class="dl-step"><span class="dl-step-num">3</span> Enable <strong>Unknown Sources</strong> if asked, then retry</div>
+        </div>
+      </details>
+
+      <div class="admin-modal-actions" style="flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
         <a href="https://github.com/Carlwyne-Dev/pendoo-web/releases/latest/download/Pendoo.apk" id="download" class="btn btn-primary" download style="text-align:center; text-decoration:none; border-radius:14px; padding:0.85rem; font-size:0.95rem; font-weight:700;">
           Download Anyway
         </a>
